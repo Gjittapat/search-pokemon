@@ -107,10 +107,7 @@ export default function PokemonResult({ name }: Props) {
             <h3 className="font-semibold text-black">Evolutions:</h3>
             <div className="flex flex-wrap gap-4 mt-2 txt-black">
               {p.evolutions.map((ev) => (
-                <Link
-                  key={ev.id}
-                  href={`/?name=${encodeURIComponent(ev.name.toLowerCase())}`}
-                >
+                <Link key={ev.id} href={`/pokemon/${ev.name.toLowerCase()}`}>
                   <div className="flex flex-col items-center hover:opacity-80">
                     <Image
                       src={ev.image}

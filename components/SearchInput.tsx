@@ -21,7 +21,7 @@ export default function SearchInput() {
     const trimmed = searchText.trim().toLowerCase();
     if (!trimmed) return;
     // Navigate to "/?name=<trimmed>"
-    router.push(`/?name=${encodeURIComponent(trimmed)}`);
+    router.push(`/pokemon/${encodeURIComponent(trimmed)}`);
   };
 
   return (
