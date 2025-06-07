@@ -1,10 +1,10 @@
-// app/pokemon/[name]/page.tsx
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Image from "next/image";
 import Link from "next/link";
 import { gql } from "@apollo/client";
 import { apolloClient } from "@/lib/apollo";
 
-// Re-define the same query (or import from graphql/queries)
 const GET_POKEMON_BY_NAME = gql`
   query GetPokemonByName($name: String!) {
     pokemon(name: $name) {
@@ -44,14 +44,9 @@ const GET_POKEMON_BY_NAME = gql`
   }
 `;
 
-interface PageProps {
-  params: { name: string };
-}
+export default async function PokemonPage({ params }: { params: any }) {
+  const name = params.name as string;
 
-export default async function PokemonPage({ params }: PageProps) {
-  const name = params.name;
-
-  // Fetch data at build time (static), cached by default
   const { data } = await apolloClient.query({
     query: GET_POKEMON_BY_NAME,
     variables: { name },
@@ -65,7 +60,7 @@ export default async function PokemonPage({ params }: PageProps) {
       <main className="px-4 py-8 text-center">
         <h1 className="text-2xl">Pokémon “{name}” not found.</h1>
         <Link href="/" className="text-blue-600 hover:underline">
-          Go back
+          ← Back to home
         </Link>
       </main>
     );
@@ -74,7 +69,7 @@ export default async function PokemonPage({ params }: PageProps) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-8">
       <Link href="/" className="text-blue-600 hover:underline mb-4 block">
-        ← Back to search
+        ← Back to home
       </Link>
 
       <div className="border rounded-lg p-6 flex flex-col md:flex-row gap-6 bg-white shadow">
