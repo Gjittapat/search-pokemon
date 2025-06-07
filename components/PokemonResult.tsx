@@ -60,6 +60,7 @@ export default function PokemonResult({ name }: Props) {
           alt={p.name}
           width={200}
           height={200}
+          unoptimized
           className="object-contain"
         />
       </div>
@@ -116,8 +117,10 @@ export default function PokemonResult({ name }: Props) {
                       alt={ev.name}
                       width={100}
                       height={100}
+                      unoptimized
                       className="object-contain"
                     />
+
                     <span>{ev.name}</span>
                   </div>
                 </Link>
