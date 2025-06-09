@@ -1,8 +1,5 @@
-// app/layout.tsx
 import "./globals.css";
 import { ReactNode } from "react";
-
-// Import the client‐side wrapper you just created:
 import ApolloProviderWrapper from "@/components/ApolloProviderWrapper";
 
 export const metadata = {
@@ -14,10 +11,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {/*
-          Wrap the entire application in ApolloProviderWrapper.
-          Because that file is marked "use client", it can use React context.
-        */}
         <ApolloProviderWrapper>{children}</ApolloProviderWrapper>
       </body>
     </html>

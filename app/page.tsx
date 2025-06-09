@@ -1,9 +1,8 @@
-// app/page.tsx
 "use client";
 
 import dynamic from "next/dynamic";
 
-// Dynamically import the client component without SSR
+// dynamically import the client component without SSR
 const HomePageClient = dynamic(() => import("@/components/HomePageClient"), {
   ssr: false,
 });
