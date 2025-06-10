@@ -4,8 +4,7 @@ A Next.js + TypeScript + Apollo Client application to search Pokémon by name or
 
 ## Live Demo & Repo
 
-- **Live demo (Vercel)**: [Your Vercel Link Here]
-- **Repository (GitHub)**: [Your GitHub Repo Link Here]
+- **Live demo (Vercel)**: https://search-pokemon-woad.vercel.app/
 
 ## Features & Highlights
 
@@ -13,7 +12,7 @@ A Next.js + TypeScript + Apollo Client application to search Pokémon by name or
 - **Pokémon Directory**: Browse the first N Pokémon with a “Show: [ N ] Pokémon” form, adjusting results dynamically.
 - **React Suspense / Apollo**: Uses `useSuspenseQuery` in client components wrapped in `<Suspense>` for clean loading states.
 - **Styling**: Tailwind CSS
-- **Dynamic Routing**: `/pokemon/[name]` for details, `/pokemons` for directory.
+- **Routing/Dynamic Routing**: `/pokemon/[name]` for details, `/pokemons` for directory.
 - **TypeScript**: Typed GraphQL queries
 
 ## Quick Start
