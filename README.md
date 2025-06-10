@@ -20,7 +20,16 @@ A Next.js + TypeScript + Apollo Client application to search Pokémon by name or
 
 1. **Clone & install**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Gjittapat/search-pokemon.git
    cd search-pokemon
    yarn install
+   ```
+2. **Run dev server**
+   ```bash
+   yarn dev
+   ```
+3. **Build for production**
+   ```bash
+   yarn build
+   yarn start
    ```
